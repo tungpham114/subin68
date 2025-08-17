@@ -1,0 +1,280 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a, nav span {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.75rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h2, h3 {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.search-form, .filter-form {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.search-form input[type="text"], .filter-form select, .filter-form input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    flex: 1;
+    transition: border-color 0.3s ease;
+}
+
+.search-form input[type="text"]:focus, .filter-form select:focus, .filter-form input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.search-form button, .filter-form button, .btn {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.1s ease, background 0.3s ease;
+}
+
+.search-form button:hover, .filter-form button:hover, .btn:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #1f618d 100%);
+    transform: translateY(-2px);
+}
+
+.services, .reviews, .comments {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.service-card, .review, .comment {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover, .review:hover, .comment:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.service-card a {
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+.service-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.price {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 1.1rem;
+}
+
+.auth-container {
+    max-width: 450px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container input, form textarea, form input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.auth-container input:focus, form textarea:focus, form input[type="number"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.error, .success {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.pagination a, .pagination .current {
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #2980b9;
+}
+
+.pagination .current {
+    background-color: #1f618d;
+}
+
+.notification {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f1f1f1;
+    font-weight: 600;
+}
+
+table tr:hover {
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 0 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a, nav span {
+        font-size: 0.9rem;
+        margin: 0 0.3rem;
+    }
+
+    .search-form, .filter-form {
+        flex-direction: column;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card img {
+        height: 150px;
+    }
+}
